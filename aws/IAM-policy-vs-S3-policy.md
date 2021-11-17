@@ -69,5 +69,6 @@ Whenever an AWS principal issues a request to S3, the authorization decision dep
   
 In accordance with the principle of `least-privilege`, decisions default to DENY and an explicit DENY always trumps an ALLOW. For example, if an IAM policy grants access to an object, the S3 bucket policies denies access to that object, and there is no S3 ACL, then access will be denied. Similarly, if no method specifies an ALLOW, then the request will be denied by default. Only if no method specifies a DENY and one or more methods specify an ALLOW will the request be allowed.
   
-This diagram illustrates the authorization process.
-![diagram](https://dmhnzl5mp9mj6.cloudfront.net/security_awsblog/images/AuthZDiagram.png)
+![policy-evaluation-logic](https://nodramadevops.com/wp-content/uploads/2019/11/AWS-PolicyEvaluationHorizontal.png)
+  
+[Original post](https://aws.amazon.com/blogs/security/iam-policies-and-bucket-policies-and-acls-oh-my-controlling-access-to-s3-resources/)

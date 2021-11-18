@@ -98,7 +98,7 @@ This feature will output any memory consumption issues that it can find and sugg
 
 ## Evicted Key
 ```
-127.0.0.1:6389> info
+127.0.0.1:6389> info memory
 # Find
 # used_memory:3538196240 -> used memory in bytes
 # used_memory_human:3.30G -> same as used_memory
@@ -134,7 +134,7 @@ This feature will output any memory consumption issues that it can find and sugg
 # client connection will consume the Redis memory, so make sure qbuf + qbuf-free and omem are in the reasonable range
 ```
 ```
-127.0.0.1:6389> info
+127.0.0.1:6389> info clients
 # Find
 # blocked_clients = 0
 # If any client was blocked(BLPOP, BRPOP, BRPOPLPUSH), that's not right
@@ -148,5 +148,5 @@ can view live network input/output to the Redis Server
 $ iftop -o 10s -n
 ```
 # Tools
-[Redis-stat](https://github.com/junegunn/redis-stat)
+[Redis-stat](https://github.com/junegunn/redis-stat)  
 [Redis-live](https://github.com/nkrode/RedisLive)
